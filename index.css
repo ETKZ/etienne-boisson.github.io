@@ -1,0 +1,113 @@
+/* === RESET / BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  padding-bottom: 3rem; /* Add bottom padding for breathing room */
+}
+ul {
+  padding-left: 1.2em;
+}
+
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.bio-card {
+  background: #d3d1d187;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* === CONTAINER === */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+
+/* === GRID SYSTEM === */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+[class*="col-"] {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+.col-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
+@media (min-width: 768px) {
+  .col-md-8 { flex: 0 0 66.6666%; max-width: 66.6666%; }
+}
+
+/* === DISPLAY === */
+.d-block { display: block !important; }
+.d-flex { display: flex !important; }
+.d-none { display: none !important; }
+.d-inline-block { display: inline-block !important; }
+
+/* === TEXT === */
+.text-center { text-align: center !important; }
+.text-left   { text-align: left !important; }
+.text-right  { text-align: right !important; }
+
+/* === SPACING === */
+.m-0 { margin: 0 !important; }
+.p-0 { padding: 0 !important; }
+.mt-3 { margin-top: 1rem !important; }
+
+/* === PROFILE PICTURE DIAMOND - FIXED === */
+.profile-pic-container {
+  position: absolute;
+  top: 27px;
+  right: 140px;
+  width: 180px;
+  height: 180px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+.profile-pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}
+
